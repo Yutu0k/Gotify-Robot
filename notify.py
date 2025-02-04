@@ -4,7 +4,7 @@ import requests
 import os
 
 GOTIFY_APP_TOKEN = os.getenv("APP_TOKEN")
-GOTIFY_INSTANCE_URL = os.getenv("GOTIFY_INSTANCE_URL")
+GOTIFY_INSTANCE_URL = os.getenv("INSTANCE_URL")
 
 json = {
 	"title": "Md Test",
