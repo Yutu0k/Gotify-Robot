@@ -2,7 +2,7 @@ name: Notification Robot
 
 on:
   schedule:
-    - cron: '0-59/3 * * * *'
+    - cron: '30 23 * * *'
   workflow_dispatch:
 
 jobs:
@@ -15,4 +15,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Notify
-        run: curl "https://notify.yutu0k.top/message?token=$APP_TOKEN" -F "title=test title" -F "message=test message" -F "priority=5"
+        run: curl "https://notify.yutu0k.top/message?token=$APP_TOKEN" -F "title=吃药啦吃药啦" -F "message=popo提醒猫咪该吃药噜" -F "priority=5"
