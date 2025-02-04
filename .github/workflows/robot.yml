@@ -10,9 +10,21 @@ jobs:
     runs-on: ubuntu-latest
     env:
       APP_TOKEN: ${{ secrets.APP_TOKEN }}
+      INSTANCE_URL: ${{ secrets.INSTANCE_URL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+    
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
       - name: Notify
-        run: curl "https://notify.yutu0k.top/message?token=$APP_TOKEN" -F "title=吃药啦吃药啦" -F "message=popo提醒猫咪该吃药噜" -F "priority=5"
+        # run: curl "https://notify.yutu0k.top/message?token=$APP_TOKEN" -F "title=吃药啦吃药啦" -F "message=popo提醒猫咪该吃药噜" -F "priority=5"
+        run: python notify.py
