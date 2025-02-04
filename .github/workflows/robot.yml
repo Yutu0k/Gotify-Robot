@@ -8,6 +8,8 @@ on:
 jobs:
   notification:
     runs-on: ubuntu-latest
+    env:
+      APP_TOKEN: ${{ secrets.APP_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
