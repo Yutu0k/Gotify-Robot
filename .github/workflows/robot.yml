@@ -3,7 +3,7 @@ name: Notification Robot
 on:
   schedule:
     - cron: '30 23 * * *'
-	  timezone: Asia/Shanghai
+      timezone: Asia/Shanghai
   workflow_dispatch:
 
 jobs:
