@@ -2,8 +2,8 @@ name: Notification Robot
 
 on:
   schedule:
-    - cron: '30 23 * * *'
-      timezone: Asia/Shanghai
+    - cron: '30 15 * * *'
+    #   timezone: 'Asia/Shanghai'
   workflow_dispatch:
 
 jobs:
