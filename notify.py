@@ -8,7 +8,7 @@ GOTIFY_INSTANCE_URL = os.getenv("INSTANCE_URL")
 
 
 json = {
-	"message": "popo提醒吃药药![蛙蛙](https://www.yutu0k.top/posts/11d3c1f7/image.png)。",
+	"message": "popo提醒吃药药![蛙蛙](https://www.yutu0k.top/posts/11d3c1f7/image.png)",
 	"priority": 5,
 	"title": "吃药药机器人发来消息",
 	"extras": {
